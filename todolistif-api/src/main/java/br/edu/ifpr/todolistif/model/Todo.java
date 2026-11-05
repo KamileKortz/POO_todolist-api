@@ -12,17 +12,17 @@ import jakarta.persistence.Column;
 public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // pk do banco
+    private Long id;
 
     @Column(nullable = false)
-    private String title; // tarefa
+    private String title;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt;// data de criação
+    private LocalDateTime createdAt;
     @Column(nullable = false)
-    private LocalDateTime deadLine;// prazo para concluir a tarefa
+    private LocalDateTime deadLine;
 
-    private LocalDateTime finishedAt;// data de conclusão da tarefa
+    private LocalDateTime finishedAt;
 
     public Todo() {
         this.createdAt = LocalDateTime.now();
